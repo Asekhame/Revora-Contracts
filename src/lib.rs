@@ -387,6 +387,8 @@ mod test_merkle_canonical_order;
 #[cfg(test)]
 mod test_min_revenue_threshold_boundary;
 #[cfg(test)]
+mod test_adversarial_report_revenue;
+#[cfg(test)]
 mod test_time_windows;
 // #[cfg(test)]
 // mod test_claim_transfer_fail;
