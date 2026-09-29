@@ -4,7 +4,9 @@ use std::fs;
 use std::path::Path;
 
 pub const STORAGE_LAYOUT_SCHEMA_VERSION: u32 = 1;
-pub const STORAGE_LAYOUT_VERSION: u32 = 2;
+/// Must stay in sync with `STORAGE_LAYOUT_VERSION` in `src/lib.rs` (asserted by
+/// `tests/storage_layout_json.rs`).
+pub const STORAGE_LAYOUT_VERSION: u32 = 5;
 
 #[derive(Clone, Copy, Debug, Eq, PartialEq)]
 pub struct StorageLayoutEntry {
