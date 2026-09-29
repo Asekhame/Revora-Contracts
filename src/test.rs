@@ -10124,7 +10124,7 @@ proptest! {
 
         let token = Address::generate(&env);
         // Mutations panic post-pause
-        let result = std::panic::catch_unwind(|| {
+        let result = std::panic::catch_unwind(std::panic::AssertUnwindSafe(|| {
             client.register_offering(&issuer,
         &Vec::new(&env),
         &1u32,
@@ -10135,7 +10135,7 @@ proptest! {
         &0,
         &symbol_short!(""),
         &0);
-        });
+        }));
         prop_assert!(result.is_err());
     }
 }

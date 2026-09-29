@@ -20,6 +20,7 @@ use crate::{RevoraError, RevoraRevenueShare, RevoraRevenueShareClient};
 use soroban_sdk::{
     symbol_short, testutils::Address as _, testutils::Events as _, xdr::ToXdr, Address, Bytes,
     BytesN, Env,
+    BytesN, Env, Vec,
 };
 
 fn setup() -> (Env, RevoraRevenueShareClient<'static>, Address, Address) {
